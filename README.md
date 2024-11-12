@@ -15,6 +15,11 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#visualizations--descriptive-methods">Visualizations / Descriptive Methods</a></li>
+      <ul>
+        <li><a href="#correlation-matrix">Correlation Matrix</a></li>
+        <li><a href="#glucose-histogram">Glucose Histogram</a></li>
+        <li><a href="#confusion-matrix">Confusion Matrix</a></li>
+      </ul>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -41,7 +46,7 @@ This project may be run directly from an IDE that support Python.
 
 ### Prerequisites
 
-A user requires 3 libraries for the program to operate:
+A user requires 5 libraries for the program to operate:
 
 * pandas
   ```sh
@@ -55,6 +60,14 @@ A user requires 3 libraries for the program to operate:
   ```sh
   python -m pip install scikit-learn
   ```
+* matplotlib
+  ```sh
+  python -m pip install matplotlib
+  ```
+* seaborn
+  ```sh
+  python -m pip install seaborn
+  ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -66,7 +79,16 @@ Upon running the program, some relevant data will be output to the terminal. A n
 <!-- VISUALIZATIONS / DESCRIPTIVE METHODS -->
 ## Visualizations / Descriptive Methods
 
-Here I have 3 pictures
+From the dataset and trained model, three visualizations are provided below:
+
+### Correlation Matrix
+![correlation matrix](images\correlation_matrix.jpg)
+
+### Glucose Histogram
+![glucose histogram](images\glucose_histogram.jpg)
+
+### Confusion Matrix
+![confusion matrix](images\confusion_matrix.jpg)
 
 <!-- CONTACT -->
 ## Contact

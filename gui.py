@@ -1,5 +1,8 @@
 import tkinter as tk
-from model import make_prediction, get_model_accuracy, get_medians
+from model import make_prediction, get_model_accuracy, get_medians, data, y_test, y_predictions, model
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Create the main GUI window
 root = tk.Tk()
@@ -65,8 +68,8 @@ def make_prediction_gui():
         prob_var.set("")
 
 # Submit button
-submit_button = tk.Button(root, text="Submit", command=make_prediction_gui)
-submit_button.grid(row=10, columnspan=2)
+submit_button = tk.Button(root, text="Submit", command=make_prediction_gui, width=20, bg="lightblue", fg="black")
+submit_button.grid(row=10, column=0, columnspan=2, sticky="ew", padx=5, pady=5)
 
 # Reset button
 def reset_inputs():
@@ -77,5 +80,45 @@ def reset_inputs():
     result_var.set("")
     prob_var.set("")
 
-reset_button = tk.Button(root, text="Reset", command=reset_inputs)
-reset_button.grid(row=11, columnspan=2)
+reset_button = tk.Button(root, text="Reset", command=reset_inputs, width=20, bg="lightcoral", fg="black")
+reset_button.grid(row=10, column=2, columnspan=2, sticky="ew", padx=5, pady=5)
+
+# Visualization functions
+def show_correlation_matrix():
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(data.corr(), annot=True, cmap="coolwarm", fmt=".2f")
+    plt.title("Feature Correlation Matrix")
+    plt.xticks(rotation=45, ha='right') # Rotate the x-axis labels for better visibility
+    plt.tight_layout() # Adjust layout to prevent clipping of x-axis labels
+    plt.show()
+
+def show_glucose_histogram():
+    plt.figure(figsize=(8, 6))
+    sns.histplot(data['Glucose'], bins=20, kde=True)
+    plt.title("Distribution of Glucose Levels")
+    plt.xlabel("Glucose (mg/dL)")
+    plt.ylabel("Frequency")
+    plt.show()
+
+def show_confusion_matrix():
+    # cm = confusion_matrix(y_true=y_test, y_pred=y_predictions)
+    cm = confusion_matrix(y_test, y_predictions)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
+    disp.plot(cmap="Blues")
+    plt.title("Confusion Matrix for Diabetes Prediction Model")
+    plt.show()
+
+# Buttons for visualizations
+correlation_button = tk.Button(root, text="Correlation Matrix", command=show_correlation_matrix)
+correlation_button.grid(row=11, column=0, sticky="ew", padx=5, pady=5)
+
+glucose_histogram_button = tk.Button(root, text="Glucose Histogram", command=show_glucose_histogram)
+glucose_histogram_button.grid(row=11, column=1, sticky="ew", padx=5, pady=5)
+
+confusion_matrix_button = tk.Button(root, text="Confusion Matrix", command=show_confusion_matrix)
+confusion_matrix_button.grid(row=11, column=2, sticky="ew", padx=5, pady=5)
+
+# Configure the grid to stretch columns evenly
+root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(1, weight=1)
+root.grid_columnconfigure(2, weight=1)
