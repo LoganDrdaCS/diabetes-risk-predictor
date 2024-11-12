@@ -18,7 +18,6 @@ y = data['Outcome']  # target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 
 # Initializing the logistic regression model
-# model = LogisticRegression(max_iter=1000)
 model = LogisticRegression(max_iter=1000, penalty='l2', solver='liblinear')
 
 # Training the model
