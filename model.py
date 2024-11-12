@@ -36,13 +36,12 @@ print("\nClassification Report:\n", classification_report(y_test, y_predictions)
 # Calculating medians of features
 medians = np.median(X_train, axis=0)
 
-# Function to make prediction based on user input
+# Prediction function
 def make_prediction(user_input):
     try:
         # Convert user input into a DataFrame with the same columns as X_train
         user_input_df = pd.DataFrame([user_input], columns=X.columns)
         
-        # Make the prediction
         prediction = model.predict(user_input_df)
         prob = model.predict_proba(user_input_df)[0][1]
 
@@ -51,6 +50,10 @@ def make_prediction(user_input):
     except ValueError:
         return "Invalid input", None
 
-# Function to return the accuracy
+# Getter function to return the accuracy
 def get_model_accuracy():
     return resulting_accuracy
+
+# Getter function to return the medians
+def get_medians():
+    return medians
