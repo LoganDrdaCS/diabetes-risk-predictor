@@ -75,6 +75,7 @@ A user requires 5 libraries for the program to operate:
 Upon running the program, some relevant data will be output to the terminal. A new window will open, allowing the user to input data and use the trained model to make a prediction. The default values in the GUI are the median values of each feature.
 
 ![GUI screenshot](images\demo_screenshot.jpg)
+
 ![GUI demo](images\demo_video.gif)
 
 <!-- VISUALIZATIONS / DESCRIPTIVE METHODS -->
