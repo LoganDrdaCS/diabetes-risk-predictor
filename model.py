@@ -4,36 +4,35 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 
-# Assigning the dataset to "data"
+# Assign the dataset to "data"
 data = pd.read_csv('data/working_dataset_diabetes.csv')
 
-# Removing any rows with missing values
+# Remove any rows with missing values to clean the data
 data.dropna(inplace=True)
 
-# Assigning features and target columns
+# Assign features and target columns
 X = data.drop(columns='Outcome')  # features
 y = data['Outcome']  # target
 
-# Splitting the data into training and testing sets using an 80/20 split
+# Split the data into training and testing sets using an 80/20 split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 
-# Initializing the logistic regression model
+# Initialize the logistic regression model with L2 regularization
 model = LogisticRegression(max_iter=1000, penalty='l2', solver='liblinear')
 
-# Training the model
+# Train the model
 model.fit(X_train, y_train)
 
-# Making predictions on the test data
+# Make predictions on the test data
 y_predictions = model.predict(X_test)
 
-# Calculating the model's accuracy
+# Calculate the model's accuracy
 resulting_accuracy = accuracy_score(y_test, y_predictions)
-print("Accuracy: ", f"{resulting_accuracy * 100:.2f}%")
 
-# Detailing the performance metrics
+# Detail the performance metrics
 print("\nClassification Report:\n", classification_report(y_test, y_predictions))
 
-# Calculating medians of features
+# Calculate medians of features
 medians = np.median(X_train, axis=0)
 
 # Prediction function

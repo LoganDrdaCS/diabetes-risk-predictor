@@ -83,13 +83,13 @@ def reset_inputs():
 reset_button = tk.Button(root, text="Reset", command=reset_inputs, width=20, bg="lightcoral", fg="black")
 reset_button.grid(row=10, column=2, columnspan=2, sticky="ew", padx=5, pady=5)
 
-# Visualization functions
+# Visualization functions for correlation matrix, glucose histogram, and confusion matrix
 def show_correlation_matrix():
     plt.figure(figsize=(8, 6))
     sns.heatmap(data.corr(), annot=True, cmap="coolwarm", fmt=".2f")
     plt.title("Feature Correlation Matrix")
-    plt.xticks(rotation=45, ha='right') # Rotate the x-axis labels for better visibility
-    plt.tight_layout() # Adjust layout to prevent clipping of x-axis labels
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
     plt.show()
 
 def show_glucose_histogram():
@@ -101,14 +101,13 @@ def show_glucose_histogram():
     plt.show()
 
 def show_confusion_matrix():
-    # cm = confusion_matrix(y_true=y_test, y_pred=y_predictions)
     cm = confusion_matrix(y_test, y_predictions)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
     disp.plot(cmap="Blues")
     plt.title("Confusion Matrix for Diabetes Prediction Model")
     plt.show()
 
-# Buttons for visualizations
+# Buttons for opening each visualization
 correlation_button = tk.Button(root, text="Correlation Matrix", command=show_correlation_matrix)
 correlation_button.grid(row=11, column=0, sticky="ew", padx=5, pady=5)
 
@@ -118,7 +117,7 @@ glucose_histogram_button.grid(row=11, column=1, sticky="ew", padx=5, pady=5)
 confusion_matrix_button = tk.Button(root, text="Confusion Matrix", command=show_confusion_matrix)
 confusion_matrix_button.grid(row=11, column=2, sticky="ew", padx=5, pady=5)
 
-# Configure the grid to stretch columns evenly
+# Configure the grid
 root.grid_columnconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=1)
 root.grid_columnconfigure(2, weight=1)

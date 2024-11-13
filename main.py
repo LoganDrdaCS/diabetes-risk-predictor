@@ -1,4 +1,4 @@
 from gui import root
 
-# Start the GUI
+# Start the GUI / application
 root.mainloop()
