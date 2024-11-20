@@ -74,9 +74,13 @@ A user requires 5 libraries for the program to operate:
 
 Upon running the program, some relevant data will be output to the terminal. A new window will open, allowing the user to input data and use the trained model to make a prediction. The default values in the GUI are the median values of each feature.
 
-![GUI screenshot](images\demo_screenshot.jpg)
+![GUI screenshot](images/demo_screenshot.jpg)
 
-![GUI demo](images\demo_video.gif)
+![GUI demo](images/demo_video.gif)
+![GUI demo](images/720p.gif)
+![GUI demo](images/1080po.gif)
+
+![.jpg of Output](readme_assets/demonstration.jpg)
 
 <!-- VISUALIZATIONS / DESCRIPTIVE METHODS -->
 ## Visualizations / Descriptive Methods
@@ -84,13 +88,13 @@ Upon running the program, some relevant data will be output to the terminal. A n
 From the dataset and trained model, three visualizations are provided below:
 
 ### Correlation Matrix
-![correlation matrix](images\correlation_matrix.jpg)
+![correlation matrix](images/correlation_matrix.jpg)
 
 ### Glucose Histogram
-![glucose histogram](images\glucose_histogram.jpg)
+![glucose histogram](images/glucose_histogram.jpg)
 
 ### Confusion Matrix
-![confusion matrix](images\confusion_matrix.jpg)
+![confusion matrix](images/confusion_matrix.jpg)
 
 <!-- CONTACT -->
 ## Contact
