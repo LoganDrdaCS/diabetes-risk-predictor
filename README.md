@@ -128,6 +128,11 @@ Evaluates the performance of the logistic regression model.
 
 ![confusion matrix](images/confusion_matrix.jpg)
 
+<!-- License -->
+## License
+
+This project is licensed under the MIT License.
+
 <!-- CONTACT -->
 ## Contact
 
