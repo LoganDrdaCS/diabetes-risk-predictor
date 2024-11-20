@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 
-# Assign the dataset to "data"
+# Assign the dataset to "data" by loading the dataset from a CSV file into a pandas DataFrame
 data = pd.read_csv('data/working_dataset_diabetes.csv')
 
 # Remove any rows with missing values to clean the data
@@ -29,10 +29,10 @@ y_predictions = model.predict(X_test)
 # Calculate the model's accuracy
 resulting_accuracy = accuracy_score(y_test, y_predictions)
 
-# Detail the performance metrics
+# Output a detailed classification report (precision, recall, F1 score)
 print("\nClassification Report:\n", classification_report(y_test, y_predictions))
 
-# Calculate medians of features
+# Calculate medians of features to use as default input values
 medians = np.median(X_train, axis=0)
 
 # Prediction function

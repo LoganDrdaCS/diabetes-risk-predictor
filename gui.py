@@ -34,7 +34,7 @@ for i, label in enumerate(labels):
     tk.Label(root, text=units[i]).grid(row=i+1, column=2)  # Unit labels
     entries.append(entry)
 
-# Labels for displaying the result
+# Labels for displaying the prediction result and probability
 tk.Label(root, text="Diabetes Onset Prediction:", anchor='e').grid(row=7, column=0, sticky='e')
 tk.Label(root, textvariable=result_var).grid(row=7, column=1)
 tk.Label(root, text="Probability of Diabetes Onset:", anchor='e').grid(row=8, column=0, sticky='e')
@@ -75,7 +75,7 @@ submit_button.grid(row=10, column=0, columnspan=2, sticky="ew", padx=5, pady=5)
 def reset_inputs():
     for i, entry in enumerate(entries):
         entry.delete(0, tk.END)
-        entry.insert(0, str(medians[i]))
+        entry.insert(0, str(medians[i])) # Reset to median default values
     
     result_var.set("")
     prob_var.set("")
