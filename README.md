@@ -78,7 +78,7 @@ Upon running the program, some relevant data will be output to the terminal. A n
 
 ![GUI demo](images/demo_video.gif)
 ![GUI demo](images/720p.gif)
-![GUI demo](images/1080po.gif)
+![GUI demo](images/1080p.gif)
 
 ![.jpg of Output](readme_assets/demonstration.jpg)
 
