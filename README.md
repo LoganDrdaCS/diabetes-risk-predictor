@@ -1,35 +1,15 @@
 # Diabetes Risk Predictor
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-    <a href="#dataset">Dataset</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#visualizations--descriptive-methods">Visualizations / Descriptive Methods</a></li>
-      <ul>
-        <li><a href="#correlation-matrix">Correlation Matrix</a></li>
-        <li><a href="#glucose-histogram">Glucose Histogram</a></li>
-        <li><a href="#confusion-matrix">Confusion Matrix</a></li>
-      </ul>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+## Table of Contents
+- [About the Project](#about-the-project)
+- [Dataset](#dataset)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Visualizations / Descriptive Methods](#visualizations--descriptive-methods)
+- [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
 The **Diabetes Risk Predictor** is a supervised machine learning application designed to predict diabetes onset based on real-world health metrics. Using logistic regression, the tool evaluates features such as glucose levels, blood pressure, BMI, and age, providing healthcare professionals with insights for early intervention.
 
 This project emphasizes building a machine learning application as a complete software solution, from data preprocessing and model training to creating a user-friendly graphical interface. The primary focus is on the development process, not maximizing performance. In this tool, each input factor reflects key features of diabetes risk, with the model trained on a robust dataset to improve its predictive accuracy.
@@ -43,7 +23,6 @@ Key elements of the project include:
 It is important to recognize that diabetes is a highly personalized condition, influenced by factors like genetics, lifestyle, and environment. The limited dataset and features used in this project are a simplification, and the results are not intended to be a definitive prediction tool. Instead, this project serves as a proof of concept, demonstrating how machine learning can be applied to healthcare challenges.
 
 ## Dataset
-
 The dataset used in this project is sourced from [Kaggle's Diabetes Dataset](https://www.kaggle.com/datasets/hasibur013/diabetes-dataset). It contains health metrics collected to help predict the likelihood of diabetes onset.
 
 ### Features
@@ -60,11 +39,9 @@ This dataset was selected as a starting point for building a proof-of-concept pr
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
 This project may be run directly from an IDE that support Python.
 
 ### Prerequisites
-
 A user requires 5 libraries for the program to operate:
 
 * pandas
@@ -90,7 +67,6 @@ A user requires 5 libraries for the program to operate:
 
 <!-- USAGE -->
 ## Usage
-
 Upon running the program, some relevant data will be output to the terminal. A new window will open, allowing the user to input data and use the trained model to make a prediction.
 
 The tool provides:
@@ -100,7 +76,6 @@ The tool provides:
 - Default input values based on the median of the training data for convenience.
 
 ### Example Usage:
-
 1. Enter metrics such as glucose level and BMI in the provided fields.
 2. Click **"Submit"** to receive a prediction along with the confidence percentage.
 3. Use the **"Reset"** button to clear inputs and start fresh.
@@ -110,7 +85,6 @@ The tool provides:
 
 <!-- VISUALIZATIONS / DESCRIPTIVE METHODS -->
 ## Visualizations / Descriptive Methods
-
 This tool includes three visualization features to better understand the data and model performance:
 
 ### Correlation Matrix
@@ -129,11 +103,9 @@ Evaluates the performance of the logistic regression model.
 ![confusion matrix](images/confusion_matrix.jpg)
 
 <!-- License -->
-## License
-
-This project is licensed under the MIT License.
+## License:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <!-- CONTACT -->
 ## Contact
-
 Logan Drda - logan.drda.cs@gmail.com
