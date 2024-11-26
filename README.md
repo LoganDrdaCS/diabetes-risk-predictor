@@ -39,10 +39,9 @@ This dataset was selected as a starting point for building a proof-of-concept pr
 
 <!-- GETTING STARTED -->
 ## Getting Started
-This project may be run directly from an IDE that support Python.
 
 ### Prerequisites
-A user requires 5 libraries for the program to operate:
+There are 5 required libraries for the program:
 
 * pandas
   ```sh
@@ -64,6 +63,11 @@ A user requires 5 libraries for the program to operate:
   ```sh
   python -m pip install seaborn
   ```
+
+### Running the Program
+1. Clone or download the repository to your local machine.
+2. Open the project an IDE or text editor that supports Python.
+3. Run the `main.py` file to start the program.
 
 <!-- USAGE -->
 ## Usage
