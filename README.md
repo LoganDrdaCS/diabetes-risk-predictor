@@ -10,14 +10,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The **Diabetes Risk Predictor** is a supervised machine learning application designed to predict diabetes onset based on real-world health metrics. Using logistic regression, the tool evaluates features such as glucose levels, blood pressure, BMI, and age, providing healthcare professionals with insights for early intervention.
+The **Diabetes Risk Predictor** is a supervised machine learning application designed to predict the likelihood of diabetes onset based on key health metrics. Using logistic regression, the tool evaluates features such as glucose levels, blood pressure, BMI, and age, providing healthcare professionals with insights for early intervention. The model classifies patients as either "Likely" or "Unlikely" to develop diabetes.
 
-This project emphasizes building a machine learning application as a complete software solution, from data preprocessing and model training to creating a user-friendly graphical interface. The primary focus is on the development process, not maximizing performance. In this tool, each input factor reflects key features of diabetes risk, with the model trained on a robust dataset to improve its predictive accuracy.
+This project focuses on building a complete machine learning application, from data preprocessing and model training to creating a user-friendly graphical interface. The primary goal is to demonstrate how machine learning can be applied to healthcare, rather than maximizing model performance. It is important to note that diabetes is a highly personalized condition, influenced by genetics, lifestyle, and environment. Due to the limited dataset and features used, the results are intended as a proof of concept rather than a definitive diagnostic tool.
 
 Key elements of the project include:
-- **Data Processing**: Using `pandas` and `numpy` for data handling, cleaning, and feature preparation.
-- **Machine Learning**: Implementing logistic regression utilizing `scikit-learn` for model building and evaluation to provide accuracy and classification reports.
-- **User Interface**: A graphical interface, built with Python's `tkinter` module, allowing users to input patient data and receive predictions along with a probability score.
+- **Data Processing**: Cleaning and preparing data using `pandas` and `numpy` for use in logistic regression.
+- **Machine Learning**: Building and evaluating a logistic regression model with `scikit-learn` to classify the risk of diabetes onset based on health metrics.
+- **User Interface**: A straightforward graphical interface built with Python's `tkinter` that allows users to input patient data and receive predictions with confidence scores.
 
 ### Note
 It is important to recognize that diabetes is a highly personalized condition, influenced by factors like genetics, lifestyle, and environment. The limited dataset and features used in this project are a simplification, and the results are not intended to be a definitive prediction tool. Instead, this project serves as a proof of concept, demonstrating how machine learning can be applied to healthcare challenges.
